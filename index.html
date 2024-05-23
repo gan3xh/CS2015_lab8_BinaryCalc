@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>220103020-Ganesh</title>
+    <link rel="stylesheet" href="220103020-lab8.css" />
+    <script src="220103020-lab8.js"></script>
+  </head>
+  <body id="body">
+    <form id="form">
+      <div id="text">
+        <input
+          type="text"
+          id="space"
+          name="text"
+          placeholder="Enter:"
+          readonly
+        /><br /><br />
+      </div>
+      <div id="radio">
+        <input type="radio" name="radio" id="disp1" checked />
+        <label for="disp1" id="disp10">Display in Binary Only</label>
+        <input type="radio" name="radio" id="disp2" />
+        <label for="disp2">Display in Binary and Decimal</label>
+      </div>
+      <br />
+      <div id="reset">
+        <input
+          type="button"
+          value="  0   "
+          onclick="inputValue('0', 'space')"
+        />
+        <input
+          type="button"
+          value="   1   "
+          onclick="inputValue('1', 'space')"
+        />
+        <input type="button" value="       =         " onclick="calculate()" />
+        <input type="button" value="    Reset      " onclick="reset('space')" />
+        <input type="button" value=" <<Prev Operation" onclick="prev()" />
+      </div>
+      <br />
+      <div id="logic">
+        <input
+          type="button"
+          value="Logical AND"
+          onclick="inputValue(' && ', 'space')"
+        />
+        <input
+          type="button"
+          value="Logical OR "
+          onclick="inputValue(' || ', 'space')"
+        />
+        <input
+          type="button"
+          value="Logical NOT"
+          onclick="inputValue(' ! ', 'space')"
+        />
+        <input type="button" value=" Next Operation>>" onclick="next()" />
+      </div>
+      <br />
+      <div id="bit">
+        <input
+          type="button"
+          value="Bitwise AND"
+          onclick="inputValue(' & ', 'space')"
+        />
+        <input
+          type="button"
+          value="Bitwise OR "
+          onclick="inputValue(' | ', 'space')"
+        />
+        <input
+          type="button"
+          value="Bitwise XOR"
+          onclick="inputValue(' ^ ', 'space')"
+        />
+        <input
+          type="button"
+          value="     Bitwise NOT    "
+          onclick="inputValue(' ~ ', 'space')"
+        />
+      </div>
+      <br />
+      <div id="shift">
+        <input
+          type="button"
+          value="  Right Shift  "
+          onclick="inputValue(' >> ', 'space')"
+        />
+        <input
+          type="button"
+          value="  Left Shift  "
+          onclick="inputValue(' << ', 'space')"
+        />
+        <input
+          type="button"
+          value="          Unsigned Right Shift            "
+          onclick="inputValue(' >>> ', 'space')"
+        />
+      </div>
+    </form>
+  </body>
+</html>
